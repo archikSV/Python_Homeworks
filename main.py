@@ -11,17 +11,17 @@ print("Task 1:\n")
 """
 
 def greet():
-    name = input("Введіть ваше ім'я: ")
-    age = input("Введіть ваш вік: ")
+    name = input("Enter your name: ")
+    age = input("Enter your age: ")
 
     try:
         age = int(age)
         if age < 0 or age > 130:
-            raise ValueError("Некоректний вік")
+            raise ValueError("Invalid age")
         else:
-            print(f"Привіт, {name}! Твій вік — {age}")
+            print(f"Hello, {name}! Your age is {age}")
     except ValueError as e:
-        print(f"Помилка: {e}")
+        print(f"Error: {e}")
 
 # main
 greet()
