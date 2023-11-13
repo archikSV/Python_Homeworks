@@ -1,19 +1,19 @@
 print("Task Date: 9.10.2023")
-print("Task X:\n")
+print("Task 5:\n")
 
 """
-Маємо три кортежі цілих чисел. Напишіть функцію,
-яка знаходить елементи, які є у всіх кортежах.
+Напишіть функцію common_endings, яка приймає список
+слів та повертає множину унікальних закінчень цих слів.
 """
 
-def find_common_elements(tuple1, tuple2, tuple3):
-    common_elements = set(tuple1) & set(tuple2) & set(tuple3)
-    return list(common_elements)
+def common_endings(words):
+    endings = set()
+    for word in words:
+        for i in range(1, len(word)):
+            endings.add(word[i:])
+    return endings
 
 # main
-tuple1 = (1, 2, 3, 4)
-tuple2 = (3, 4, 5, 6)
-tuple3 = (4, 5, 6, 7)
-
-common_elements = find_common_elements(tuple1, tuple2, tuple3)
-print(common_elements)
+words = ["apple", "banana", "orange", "grapefruit"]
+result = common_endings(words)
+print(result)
